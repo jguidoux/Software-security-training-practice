@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ajout d'un article - Bienvenue sur MonJournal !!!</title>
+</head>
+<body>
+
+<h1>Bienvenue sur MonJournal !!!</h1>
+
+<h2>Ajout d'un article</h2>
+
+<form action="enregistrer.php" method="post">
+		
+	<label for="titre">Titre : </label>
+	<input type="text" name="titre" id="titre" />
+	<br />
+
+	<label for="intro">Introduction : </label>
+	<textarea rows="5" cols="50" name="intro" id="intro"></textarea>
+	<br />
+
+	<label for="texte">Texte : </label>
+	<textarea rows="15" cols="50" name="texte" id="texte"></textarea>
+	<br />
+
+ 	<label for="auteur">Auteur : </label>
+ 	<input type="text" name="auteur" id="auteur" /> 
+ 	<br />
+
+	<input type="hidden" name="_csrf_token" value="{{ _csrf_token }}" />
+
+	<button type="submit">Enregistrer</button>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Authentification - Bienvenue sur MonJournal !!!</title>
+</head>
+<body>
+
+<h1>Bienvenue sur MonJournal !!!</h1>
+
+<h2>Authentification nécessaire</h2>
+
+<form action="authentifier.php" method="post">
+	
+	<label for="titre">Identifiant : </label>
+	<input type="text" name="identifiant" id="identifiant" />
+	<br />
+
+	<label for="motdepasse">Mot de passe : </label>
+	<input type="password" name="motdepasse" id="motdepasse" />
+	<br />
+
+	<input type="hidden" name="_csrf_token" value="{{ _csrf_token }}" />
+
+	<button type="submit">Valider</button>
+
+</form>
+
+</body>
+</html>
