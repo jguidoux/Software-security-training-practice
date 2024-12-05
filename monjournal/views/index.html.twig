@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Bienvenue sur MonJournal !!! </title>
+</head>
+<body>
+
+<h1>Bienvenue sur MonJournal !!! </h1>
+
+	<p>
+		<a href="ajouter.php">Ajouter un article</a>
+		<br />
+	</p>
+
+	{% for article in lesArticles %}
+	<h3>{{ article.titre }}</h3>
+	<p>
+		<b>Ecrit par {{ article.auteur }}, le {{ article.date | date('d/m/Y') }}</b>
+	<p>
+	<p>
+		<i>{{ article.intro }}</i>
+	</p>
+	<p>
+		<a href="article.php?id={{ article.id }}">Lire la suite ...</a>
+	</p>
+	<hr />
+	{% endfor %}
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{{ article.titre }} - Bienvenue sur MonJournal !!!</title>
+</head>
+<body>
+
+<h1>Bienvenue sur MonJournal !!! </h1>
+
+<h2>{{ article.titre }}</h2>
+	<p>
+		<b>Ecrit par {{ article.auteur }}, {{ article.date | date('d/m/Y') }}</b>
+	<p>
+	<p>
+		<i>{{ article.intro }}</i>
+	</p>
+	<p>
+		{{ article.texte }}
+	</p>
+
+	<hr />
+	<a href="index.php">Retour à l'accueil</a>
+</body>
+</html>
